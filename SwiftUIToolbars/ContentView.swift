@@ -9,8 +9,38 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            VStack {
+                
+            }
+            .navigationTitle("SwiftUI ToolBar")
+            .toolbar {
+                ToolbarItemGroup(placement:.navigationBarLeading) {
+                    Button(action: {
+                        
+                    }, label: {
+                        Image(systemName: "bell")
+                            
+                    })
+                }
+                ToolbarItemGroup(placement:.navigationBarTrailing) {
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("Search")
+                    })
+                   
+                }
+                ToolbarItemGroup(placement: .bottomBar) {
+                    Button(action: {
+                        print("go to my account")
+                    }, label: {
+                        Text("My Account")
+                    })
+                    
+                }
+            }
+        }
     }
 }
 
